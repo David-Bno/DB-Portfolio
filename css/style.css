@@ -1,0 +1,139 @@
+body {
+  background-color: #1D1B24;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Colors */
+  .light-gray {
+    color: #ABABAB;
+  }
+
+  .light-blue {
+    color: #00CDAF;
+  }
+
+/* Navbar */
+  .nav {
+    background-color: #1D1B24;
+    height: 110px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav.active{
+    background-color: #1C1C1C !important;
+    height: 90px;
+    transition: 0.3s ease-in-out;
+  }
+
+  nav > div > hr {
+    border-top: 6px solid #00CDAF;
+    border-radius: 3px;
+    width: 54px;
+  }
+
+  nav > ul > li > a:hover {
+    color: #00CDAF;
+  }
+
+/* Socials */
+  .socials > a > img {
+    height: 30px;
+    width: auto;
+  }
+
+/* Fake text */
+  .fake-text {
+    color: #2A2931;
+    z-index: -1;
+    font-size: 170px;
+    font-weight: bold;
+    position: absolute;
+    top: 6.5rem;
+  }
+
+/* Scroll arrows */
+  .arrowDown {
+    height: 80px;
+    width: 20px;
+  }
+
+  .scroll-text {
+    color: #ABABAB;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+/* Page 1 */
+  .cadre {
+    background-color: #111318;
+    height: 644px;
+    width: 491px;
+    border-radius: 3px;
+  }
+
+  .cadre > img {
+    height: 591px;
+    width: 446px;
+    border-radius: 2px;
+
+  }
+
+  div > a > img {
+    height: 60px;
+    width: auto;
+  }
+
+/* Formulaire */
+  form > input, form > textarea{
+    background-color: #1D1B24;
+    color: #C4C4C4;
+    border: 1px solid #FEFEFE;
+  }
+
+  .button {
+    background-color: #00CDAF;
+    color: #1C1C1C;
+    padding: 15px 30px;
+  }
+
+  .blue-hr {
+    border-top: 6px solid #00CDAF;
+    border-radius: 3px;
+    width: 508px;
+  }
+
+  .social-img {
+    height: 30px;
+    width: auto;
+  }
+  
+  .arrowUp {
+    height: 100px;
+    width: auto;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    background-color: #1D1B24;
+    color: #C4C4C4;
+    border: 1px solid #FEFEFE;
+  }
+
+/* Footer */
+  footer {
+    height: 60px;
+    color: #C4C4C4;
+  }
+
+  .footer-hr {
+    border: 1px solid #707070;
+  }
