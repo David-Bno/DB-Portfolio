@@ -13,13 +13,14 @@
 
 <body>
   <!-- Navbar -->
-  <nav id="nav" class="flex nav items-center justify-between px-10 fixed w-screen z-10 navJS">
+  <nav id="nav" class="flex nav items-center justify-between px-10 fixed w-screen z-10">
       <div class="mr-auto">
         <a href="#accueil"><h1 class="text-3xl font-bold">DAVID BOCCOMINO</h1></a>
         <hr class="mt-3">
       </div>
+      <button class="menu" id="menu">Menu</button>
 
-      <ul class="flex justify-around ml-auto">
+      <ul class="flex justify-around ml-auto flex-wrap nav-ul" id="nav-ul">
         <li class="mx-5 font-light light-gray text-2xl"><a href="#a-propos">A PROPOS</a></li>
         <li class="mx-5 font-light light-gray text-2xl"><a href="#competences">COMPETENCES</a></li>
         <li class="mx-5 font-light light-gray text-2xl"><a href="#parcours">PARCOURS</a></li>
@@ -28,22 +29,34 @@
   </nav>
 
   <!-- Socials -->
-  <nav class="socials flex flex-col items-center fixed left-6 top-80">
-    <a href="https://www.facebook.com/david.boccomino" target="_blank" class="my-2"><img src="img/facebook-gray.svg" alt="Facebook"></a>
-    <a href="https://www.instagram.com/david.bno/" target="_blank" class="my-2"><img src="img/instagram-gray.svg" alt="Instagram"></a>
-    <a href="https://twitter.com/davidbno_" target="_blank" class="my-2"><img src="img/twitter-gray.svg" alt="Twitter"></a>
-    <a href="https://www.linkedin.com/in/david-boccomino-854079202/" target="_blank" class="my-2"><img src="img/linkedin-gray.svg" alt="LinkedIn"></a>
+  <nav class="socials flex flex-col items-center fixed left-6 top-80 z-10">
+    <a href="https://www.facebook.com/david.boccomino" target="_blank" class="my-2 image-hover">
+      <img src="img/facebook-gray.svg" alt="Logo Facebook gris">
+      <img src="img/facebook-blue.svg" alt="Logo Facebook bleu" class="hide">
+    </a>
+    <a href="https://www.instagram.com/david.bno/" target="_blank" class="my-2 image-hover">
+      <img src="img/instagram-gray.svg" alt="Logo Instagram gris">
+      <img src="img/instagram-blue.svg" alt="Logo Instagram bleu" class="hide">
+    </a>
+    <a href="https://twitter.com/davidbno_" target="_blank" class="my-2 image-hover">
+      <img src="img/twitter-gray.svg" alt="Logo Twitter gris">
+      <img src="img/twitter-blue.svg" alt="Logo Twitter bleu" class="hide">
+    </a>
+    <a href="https://www.linkedin.com/in/david-boccomino-854079202/" target="_blank" class="my-2 image-hover">
+      <img src="img/linkedin-gray.svg" alt="Logo LinkedIn gris">
+      <img src="img/linkedin-blue.svg" alt="Logo LinkedIn bleu" class="hide">
+    </a>
   </nav>
 
   <!-- Page 1 / Hello -->
   <div class="page flex justify-center items-center h-screen relative" id="accueil">
     <div class="container">
 
-      <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="grid grid-cols-1 lg:grid-cols-3">
         <div class="col-span-2 my-auto">
-          <h2 class="text-8xl font-bold my-3">&lt;<span class="light-blue">h1</span>&gt;Hello&lt;/<span class="light-blue">h1</span>&gt;</h2>
-          <h3 class="text-6xl font-light my-3">Je m'appelle <span class="light-blue">David</span>,</h3>
-          <h3 class="text-6xl font-light my-3">Développeur front-end.</h3>
+          <h2 class="text-3xl lg:text-6xl 2xl:text-8xl font-bold my-3">&lt;<span class="light-blue">h1</span>&gt;Hello&lt;/<span class="light-blue">h1</span>&gt;</h2>
+          <h3 class="text-2xl lg:text-4xl 2xl:text-6xl font-light my-3">Développeur front-end.</h3>
+          <h3 class="text-2xl lg:text-4xl 2xl:text-6xl font-light my-3">Je m'appelle <span class="light-blue">David</span>,</h3>
         </div>
 
         <div class="col-span-1">
@@ -68,7 +81,7 @@
       <div class="fake-text">&lt;a propos de moi /&gt;</div>
 
       <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="col-span-2 my-auto">
+        <div class="col-span-1 md:col-span-2 my-auto">
           <p class="text-2xl my-10">Je suis un développeur Front-End du sud de la France, j'ai 23 ans. Passionné de veille
             technologique et de design, je me suis orienté vers une formation Symfony/Angular. 
             Ma soif de connaissance m'a impliqué par la suite dans l'apprentissage de nombreux 

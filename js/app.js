@@ -35,3 +35,10 @@ function inViewport(node) {
 
   return ((rect.height - Math.abs(rect.top)) <= vph && (rect.height - Math.abs(rect.top)) > (vph/2))
 }
+
+const menu = document.getElementById('menu');
+const navUl = document.getElementById('nav-ul');
+
+menu.addEventListener('click', () => {
+  navUl.classList.toggle('show');
+})

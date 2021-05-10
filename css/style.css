@@ -41,14 +41,34 @@ html {
     width: 54px;
   }
 
-  nav > ul > li > a:hover {
+  .nav-ul > li > a:hover {
     color: #00CDAF;
+  }
+
+  .nav-ul {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none;
   }
 
 /* Socials */
   .socials > a > img {
     height: 30px;
     width: auto;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .image-hover:hover img:first-child {
+    display: none;
+  }
+
+  .image-hover:hover img:last-child {
+    display: inline-block;
   }
 
 /* Fake text */
@@ -89,16 +109,16 @@ html {
 /* Page 1 */
   .cadre {
     background-color: #111318;
-    height: 644px;
-    width: 491px;
+    max-height: 644px;
+    max-width: 491px;
     border-radius: 3px;
+    padding: 20px;
   }
 
   .cadre > img {
-    height: 591px;
-    width: 446px;
+    height: auto;
+    max-width: 100%;
     border-radius: 2px;
-
   }
 
   div > a > img {
@@ -107,12 +127,12 @@ html {
   }
 
 /* Formulaire */
-  form > input, form > textarea{
+  input, textarea{
     background-color: #1D1B24;
     color: #C4C4C4;
     border: 1px solid #FEFEFE;
   }
-
+  
   .button {
     background-color: #00CDAF;
     color: #1C1C1C;
@@ -155,3 +175,19 @@ html {
   .footer-hr {
     border: 1px solid #707070;
   }
+
+@media screen and (max-width: 767px) {
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+}
