@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/css/tailwind.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>David Boccomino</title>
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="flex nav items-center justify-between px-10 fixed w-screen z-10 navJS">
+  <nav id="nav" class="flex nav items-center justify-between px-10 fixed w-screen z-10 navJS">
       <div class="mr-auto">
         <a href="#accueil"><h1 class="text-3xl font-bold">DAVID BOCCOMINO</h1></a>
         <hr class="mt-3">
@@ -29,14 +29,14 @@
 
   <!-- Socials -->
   <nav class="socials flex flex-col items-center fixed left-6 top-80">
-    <a href="https://www.facebook.com/david.boccomino" target="_blank" class="my-2"><img src="/img/facebook-gray.svg" alt="Facebook"></a>
-    <a href="https://www.instagram.com/david.bno/" target="_blank" class="my-2"><img src="/img/instagram-gray.svg" alt="Instagram"></a>
-    <a href="https://twitter.com/davidbno_" target="_blank" class="my-2"><img src="/img/twitter-gray.svg" alt="Twitter"></a>
-    <a href="https://www.linkedin.com/in/david-boccomino-854079202/" target="_blank" class="my-2"><img src="/img/linkedin-gray.svg" alt="LinkedIn"></a>
+    <a href="https://www.facebook.com/david.boccomino" target="_blank" class="my-2"><img src="img/facebook-gray.svg" alt="Facebook"></a>
+    <a href="https://www.instagram.com/david.bno/" target="_blank" class="my-2"><img src="img/instagram-gray.svg" alt="Instagram"></a>
+    <a href="https://twitter.com/davidbno_" target="_blank" class="my-2"><img src="img/twitter-gray.svg" alt="Twitter"></a>
+    <a href="https://www.linkedin.com/in/david-boccomino-854079202/" target="_blank" class="my-2"><img src="img/linkedin-gray.svg" alt="LinkedIn"></a>
   </nav>
 
   <!-- Page 1 / Hello -->
-  <div class="flex justify-center items-center h-screen relative" id="accueil">
+  <div class="page flex justify-center items-center h-screen relative" id="accueil">
     <div class="container">
 
       <div class="grid grid-cols-1 md:grid-cols-3">
@@ -62,7 +62,7 @@
   </div>
 
   <!-- Page 2 / A propos de moi -->
-  <div class="flex justify-center items-center h-screen relative" id="a-propos">
+  <div class="page flex justify-center items-center h-screen relative" id="a-propos">
     <div class="container">
 
       <div class="fake-text">&lt;a propos de moi /&gt;</div>
@@ -96,28 +96,62 @@
   </div>
 
   <!-- Page 3 / Compétences -->
-  <div class="flex justify-center items-center h-screen relative" id="competences">
+  <div class="page flex justify-center items-center h-screen relative" id="competences">
     <div class="container">
 
       <div class="fake-text right-40">&lt;competences /&gt;</div>
       
       <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="col-span-2 my-auto">
-          <p class="text-2xl my-10">Je suis un développeur Front-End du sud de la France, j'ai 23 ans. Passionné de veille
-            technologique et de design, je me suis orienté vers une formation Symfony/Angular. 
-            Ma soif de connaissance m'a impliqué par la suite dans l'apprentissage de nombreux 
-            autres langages, frameworks et outils.</p>
-          <p class="text-2xl my-10">Curieux et appliqué, j'ai de nombreux centres d'intérêt tels que la guitare et la musique
-            en général, les jeux vidéo, la téléphonie, l'horlogerie ou encore la Formule 1.</p>
-          <p class="text-2xl my-10">Mon goût pour les interfaces utilisateurs grandissant, je me spécialise donc
-            dans ces dernières.</p>
+        <div class="col-span-1">
+          <div class="flex flex-col items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/code.svg" alt="Icone de chevrons de code">
+            </div>
+            <h2 class="font-bold text-5xl">Langages</h2>
+
+            <ul class="text-2xl mt-6 ml-3">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="col-span-1 relative">
-          <h2 class="light-blue text-4xl font-bold absolute left-64">Intuitif</h2>
-          <h2 class="light-blue text-5xl font-bold absolute top-16 left-10">Appliqué</h2>
-          <h2 class="light-blue text-7xl font-bold absolute top-40 left-72">Créatif</h2>
-          <h2 class="light-blue text-4xl font-bold absolute top-64 left-24">Assidu</h2>
+        <div class="col-span-1">
+          <div class="flex flex-col items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/server.svg" alt="Icone de chevrons de code">
+            </div>
+            <h2 class="font-bold text-5xl">Frameworks</h2>
+
+            <ul class="text-2xl mt-6">
+              <li>Bootstrap</li>
+              <li>TailwindCSS</li>
+              <li>AngularJS</li>
+              <li>Symfony</li>
+              <li>PrestaShop</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="flex flex-col items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/tools.svg" alt="Icone d'outils">
+            </div>
+            <h2 class="font-bold text-5xl">Outils</h2>
+
+            <ul class="text-2xl mt-6 ml-3">
+              <li>Visual Studio Code</li>
+              <li>FileZilla</li>
+              <li>Git</li>
+              <li>WAMP</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe XD</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -130,29 +164,147 @@
   </div>
 
   <!-- Page 4 / Parcours -->
-  <div class="flex justify-center items-center h-screen relative" id="parcours">
+  <div class="page flex justify-center items-center h-screen relative" id="parcours">
     <div class="container">
 
       <div class="fake-text left-40">&lt;parcours /&gt;</div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="col-span-2 my-auto">
-          <p class="text-2xl my-10">Je suis un développeur Front-End du sud de la France, j'ai 23 ans. Passionné de veille
-            technologique et de design, je me suis orienté vers une formation Symfony/Angular. 
-            Ma soif de connaissance m'a impliqué par la suite dans l'apprentissage de nombreux 
-            autres langages, frameworks et outils.</p>
-          <p class="text-2xl my-10">Curieux et appliqué, j'ai de nombreux centres d'intérêt tels que la guitare et la musique
-            en général, les jeux vidéo, la téléphonie, l'horlogerie ou encore la Formule 1.</p>
-          <p class="text-2xl my-10">Mon goût pour les interfaces utilisateurs grandissant, je me spécialise donc
-            dans ces dernières.</p>
+      <div class="grid grid-cols-1 md:grid-cols-5 mt-24">
+        <div class="col-span-2">
+
+          <div class="flex items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/briefcase.svg" alt="Icone de valise">
+            </div>
+
+            <h2 class="font-bold text-5xl ml-4">Expériences</h2>
+          </div>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">MARS - AVRIL 2021</li>
+            <div class="ml-4">
+              <li class="uppercase">Stage développeur web</li>
+              <li class="light-gray">Desineo GLG SAS, Fréjus</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">NOV 2020</li>
+            <div class="ml-4">
+              <li class="uppercase">Tireur à quai</li>
+              <li class="light-gray">ITM LOGISTIQUE, Brignoles</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">AOUT - OCT 2020</li>
+            <div class="ml-4">
+              <li class="uppercase">Réceptionnaire</li>
+              <li class="light-gray">STAC SUD EST, Fuveau</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">JUILLET 2020</li>
+            <div class="ml-4">
+              <li class="uppercase">Préparateur de commandes</li>
+              <li class="light-gray">LECASUD, Le Luc</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">OCT 2017 - JUIN 2020</li>
+            <div class="ml-4">
+              <li class="uppercase">Vendeur multimédia</li>
+              <li class="light-gray">ESPACE CULTUREL E.LECLERC, Le Luc</li>
+            </div>
+          </ul>
+
         </div>
 
-        <div class="col-span-1 relative">
-          <h2 class="light-blue text-4xl font-bold absolute left-64">Intuitif</h2>
-          <h2 class="light-blue text-5xl font-bold absolute top-16 left-10">Appliqué</h2>
-          <h2 class="light-blue text-7xl font-bold absolute top-40 left-72">Créatif</h2>
-          <h2 class="light-blue text-4xl font-bold absolute top-64 left-24">Assidu</h2>
+        <div class="col-span-2">
+          <div class="flex items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/graduation.svg" alt="Icone de graduation">
+            </div>
+
+            <h2 class="font-bold text-5xl ml-4">Formations</h2>
+          </div>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">2020 - 2021</li>
+            <div class="ml-4">
+              <li class="uppercase">Développeur web Symfony Angular</li>
+              <li class="light-gray">MODE83, Draguignan</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">2020</li>
+            <div class="ml-4">
+              <li class="uppercase">CACES 1A</li>
+              <li class="light-gray">AFTRAL, Brignoles</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">2016 - 2017</li>
+            <div class="ml-4">
+              <li class="uppercase">LEA Anglais Japonais (interrompu)</li>
+              <li class="light-gray">AIX MARSEILLE UNIVERSITE, Aix-en-Provence</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">2015</li>
+            <div class="ml-4">
+              <li class="uppercase">Baccalauréat Professionnel Commerce</li>
+              <li class="light-gray">LYCEE RAYNOUARD, Brignoles</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue">2014</li>
+            <div class="ml-4">
+              <li class="uppercase">Brevet d'études professionnelles</li>
+              <li class="light-gray">LYCEE RAYNOUARD, Brignoles</li>
+            </div>
+          </ul>
         </div>
+
+        <div class="col-span-1">
+          <div class="flex items-center">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/language.svg" alt="Icone de langages">
+            </div>
+
+            <h2 class="font-bold text-5xl ml-4">Langues</h2>
+          </div>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue uppercase">Anglais</li>
+            <div class="ml-4">
+              <li class="uppercase">Très bon</li>
+            </div>
+          </ul>
+
+          <ul class="ml-12 my-3 font-bold">
+            <li class="light-blue uppercase">Japonais</li>
+            <div class="ml-4">
+              <li class="uppercase">Notions</li>
+            </div>
+          </ul>
+
+
+          <div class="flex items-center mt-24">
+            <div class="blue-circle flex justify-center items-center">
+              <img src="img/car-side.svg" alt="Icone de voiture">
+            </div>
+  
+            <h2 class="font-bold text-5xl ml-4">Permis B</h2>
+          </div>
+        </div>
+
       </div>
 
       <div class="absolute flex bottom-10 left-20">
@@ -164,7 +316,7 @@
   </div>
 
   <!-- Page 5 / Contact -->
-  <div class="flex justify-center items-center h-screen relative" id="contact">
+  <div class="page flex justify-center items-center h-screen relative" id="contact">
     <div class="container">
 
       <div class="fake-text right-40">&lt;contact /&gt;</div>

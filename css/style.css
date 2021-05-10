@@ -24,7 +24,12 @@ html {
     transition: 0.3s ease-in-out;
   }
 
-  .nav.active{
+  .active {
+    color:#00CDAF;
+    font-weight: bold;
+  }
+
+  .nav.reduite{
     background-color: #1C1C1C !important;
     height: 90px;
     transition: 0.3s ease-in-out;
@@ -66,6 +71,19 @@ html {
     color: #ABABAB;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+  }
+
+/* Cercles bleus */
+  .blue-circle {
+    background-color: #00CDAF;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+
+  .blue-circle > img {
+    height: 35px;
+    width: auto;
   }
 
 /* Page 1 */
