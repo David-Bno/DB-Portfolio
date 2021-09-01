@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+
 body {
   background-color: #1D1B24;
   font-family: 'Segoe UI', sans-serif;
@@ -24,9 +27,11 @@ html {
     transition: 0.3s ease-in-out;
   }
 
-  .active {
-    color:#00CDAF;
-    font-weight: bold;
+  @media screen and (min-width: 1280px) {
+    .active {
+      color:#00CDAF;
+      font-weight: bold;
+    }
   }
 
   .nav.reduite{
@@ -45,12 +50,108 @@ html {
     color: #00CDAF;
   }
 
-  .nav-ul {
-    flex-wrap: wrap;
+/* Menu burger */
+  #btn-menu {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
   }
 
-  .menu {
+  #menu-overlay {
     display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #sidebar-menu {
+    display: none;
+    position: fixed;
+    width: 84%;
+    z-index: 20;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1D1B24;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+  }
+
+  #sidebar-menu li {
+    display: block;
+  }
+
+  #sidebar-header {
+    background-image: url(../img/banniere.png);
+    background-size: cover;
+    height: 250px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #sidebar-header {
+      height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #sidebar-header {
+      height: 128px;
+    }
+  }
+
+  #sidebar-body {
+    padding: 16px 40px;
+    
+  }
+
+  #sidebar-body > li {
+    margin: 10px;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 1024px) {
+    #menu {
+      display: none;
+    }
+
+    #btn-menu, #sidebar-menu, .menu-activated #menu-overlay {
+      display: block;
+    }
+
+    .menu-activated #sidebar-menu {
+      transform: translateX(0);
+    }
+
+    #social {
+      display: none;
+    }
+
+    #sidebar-social {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    #sidebar-social > a > img {
+      height: 30px;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-height: 400px) {
+    #sidebar-body {
+      display: none;
+    }
   }
 
 /* Socials */
@@ -91,6 +192,19 @@ html {
     color: #ABABAB;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+  }
+
+/* Cercles bleus */
+  .blue-circle-comp {
+    background-color: #00CDAF;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+
+  .blue-circle-comp > img {
+    height: 35px;
+    width: auto;
   }
 
 /* Cercles bleus */
@@ -176,18 +290,172 @@ html {
     border: 1px solid #707070;
   }
 
-@media screen and (max-width: 767px) {
-  .nav-ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+
+
+/* Media queries */
+  @media (max-height: 900px) {
+    .fake-text {
+      top: 0px !important;
+    }
+
+    /* Page 1 */
+      .cadre {
+        background-color: #111318;
+        max-height: 550px;
+        max-width: 419px;
+        border-radius: 3px;
+        padding: 20px;
+      }
+
+      .cadre > img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 2px;
+      }
+
+      div > a > img {
+        height: 60px;
+        width: auto;
+      }
   }
 
-  .nav-ul.show {
-    display: flex;
+  @media (max-width: 1897px) { 
+    .fake-text {
+      font-size: 150px;
+    }
+
   }
 
-  .menu {
-    display: block;
+  @media (max-width: 1670px) { 
+    /* Fake-text */ 
+      .fake-text {
+        font-size: 120px;
+      }
   }
-}
+
+  @media (max-width: 1536px) {
+    .nav {
+      height: 100px;
+    }
+  
+    .nav.reduite{
+      height: 80px;
+    }
+  }
+
+  @media (max-width: 1280px) { 
+    /* Fake-text */ 
+      .fake-text {
+        font-size: 90px;
+      }
+  }
+
+  @media (max-width: 1024px) { 
+    /* Fake-text */ 
+      .fake-text {
+        font-size: 70px;
+      }
+
+    /* Page 1 */
+    .cadre {
+      background-color: #111318;
+      max-height: 450px;
+      max-width: 343px;
+      border-radius: 3px;
+      padding: 20px;
+    }
+
+    .cadre > img {
+      height: auto;
+      max-width: 100%;
+      border-radius: 2px;
+    }
+
+    div > a > img {
+      height: 60px;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    /* Menu burger */
+      .nav-ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-ul.show {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+    /* Fake-text */ 
+      .fake-text {
+        font-size: 50px;
+      }
+
+    /* HR Form */
+      .blue-hr {
+        width: 345px;
+      }
+
+    .arrowUp {
+      height: 80px;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 639px) {
+    /* Fake-text */ 
+    .fake-text {
+      font-size: 35px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Cercles bleus */
+      .blue-circle {
+        background-color: #00CDAF;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+      .blue-circle > img {
+        height: 25px;
+        width: auto;
+      }
+
+    /* HR Form */
+      .blue-hr {
+        width: 215px;
+      }
+
+    .fake-text {
+      color: #484752;
+    }
+  }
+
+  @media (max-width: 317px) {
+    .intro > h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .intro > h3 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    #accueil > h1 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    .fake-text {
+      font-size: 26px;
+    }
+  }
+
+
+  @tailwind utilities;

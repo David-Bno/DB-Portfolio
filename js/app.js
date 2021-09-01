@@ -36,9 +36,35 @@ function inViewport(node) {
   return ((rect.height - Math.abs(rect.top)) <= vph && (rect.height - Math.abs(rect.top)) > (vph/2))
 }
 
-const menu = document.getElementById('menu');
-const navUl = document.getElementById('nav-ul');
+// Menu burger
 
-menu.addEventListener('click', () => {
-  navUl.classList.toggle('show');
-})
+var menu = document.querySelector('#menu');
+var sidebarBody = document.querySelector('#sidebar-body');
+var social = document.querySelector('#social');
+var sidebarSocial = document.querySelector('#sidebar-social');
+var button = document.querySelector('#btn-menu');
+var overlay = document.querySelector('#menu-overlay');
+var activatedClass = 'menu-activated';
+
+sidebarBody.innerHTML = menu.innerHTML;
+sidebarSocial.innerHTML = social.innerHTML;
+
+// On écoute le clic sur le bouton
+button.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  this.parentNode.classList.add(activatedClass);
+});
+
+button.addEventListener('keydown', function(e) {
+  if (this.parentNode.classList.contains(activatedClass)) 
+  {
+    if (e.repeat === false && e.which === 27) this.parentNode.classList.remove(activatedClass);
+  }
+});
+
+overlay.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  this.parentNode.classList.remove(activatedClass);
+});
